@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query"
 
-export default function Heroes() {
+export default function Cars() {
     
     const { isLoading, error, data } = useQuery({
-        queryKey: ['heroes'],
+        queryKey: ['cars'],
         queryFn: () => 
-            fetch('http://localhost:4000/heroes')
+            fetch('http://localhost:4000/cars')
             .then(res => res.json())  
     })
     if (isLoading) return <div>Loading...</div>
@@ -15,11 +15,11 @@ export default function Heroes() {
     
     return (
         <>
-        <h1>Heroes</h1>
-            {data && data.map(hero => (
-                <div key={hero.id}>
-                    <h2>{hero.name}</h2>
-                    <p>{hero.alias}</p>
+        <h1>Cars</h1>
+            {data && data.map(car => (
+                <div key={car.id}>
+                    <h2>{car.make}</h2>
+                    <p>{car.model}</p>
                 </div>
             )
             )}  

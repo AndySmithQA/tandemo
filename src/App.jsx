@@ -2,7 +2,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import './app.css'
-import Heroes from './Heroes'
+import Cars from './Cars'
 import Home from './Home'
 import RootLayout from './RootLayout'
 
@@ -10,7 +10,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="heroes" element={<Heroes />} />
+      <Route path="cars" element={<Cars />} />
     </Route>
   )
 )
