@@ -6,7 +6,7 @@ export default function RootLayout() {
       <header>
         <nav>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="heroes">Heroes</NavLink>
+            <NavLink to="cars">Cars</NavLink>
         </nav>
       </header>
 
